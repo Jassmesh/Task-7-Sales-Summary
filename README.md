@@ -39,6 +39,6 @@ Build a basic sales summary using an SQLite database and analyze it using SQL wi
 ![Sales Table](sales_summary_table.png)
 
 ### 4. 📄 Raw Sales Table (from SQLite)
-See: [raw_sales_table](raw_sales_table.png)
+See: ![raw_sales_table](raw_sales_table.png)
 
 ---
