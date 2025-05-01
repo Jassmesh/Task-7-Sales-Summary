@@ -37,6 +37,28 @@ sales_data = [
 cursor.executemany("INSERT INTO sales (date, product, quantity, price) VALUES (?, ?, ?, ?)", sales_data)
 conn.commit()
 
+# 2.5 Show raw sales table (for screenshot or viewing)
+df_raw = pd.read_sql_query("SELECT * FROM sales", conn)
+print("\n📄 Raw Sales Table:")
+print(df_raw)
+# Display raw table as image
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.axis('off')
+
+table_raw = plt.table(cellText=df_raw.values,
+                      colLabels=df_raw.columns,
+                      loc='center',
+                      cellLoc='center',
+                      colLoc='center',
+                      bbox=[0, 0, 1, 1])
+
+table_raw.auto_set_font_size(False)
+table_raw.set_fontsize(10)
+table_raw.scale(1, 1.5)
+
+plt.title("Raw Sales Table (From sales_data.db)", pad=20)
+plt.savefig("raw_sales_table.png")
+plt.show()
 # 3. SQL Query: Summary by product
 query = '''
 SELECT product, 
@@ -50,7 +72,7 @@ ORDER BY revenue DESC'''
 df = pd.read_sql_query(query, conn)
 
 # 4. Display result
-print("Sales Summary by Product:")
+print("\nSales Summary by Product:")
 print(df)
 
 # 5. Plot bar chart
