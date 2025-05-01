@@ -28,17 +28,20 @@ Build a basic sales summary using an SQLite database and analyze it using SQL wi
 ---
 
 ## 📊 Sample Outputs
+### 1. 📄 Raw Sales Table (from SQLite)
+![raw_sales_table](raw_sales_table.png)
 
-### 1. 📈 Revenue by Product – Bar Chart  
-![Bar Chart](sales_chart.png)
-
-### 2. 🥧 Revenue Share by Product – Pie Chart  
-![Pie Chart](revenue_pie_chart.png)
-
-### 3. 📋 Sales Summary – Table  
+### 2. 📋 Sales Summary – Table  
 ![Sales Table](sales_summary_table.png)
 
-### 4. 📄 Raw Sales Table (from SQLite)
-![raw_sales_table](raw_sales_table.png)
+### 3. 📈 Revenue by Product – Bar Chart  
+![Bar Chart](sales_chart.png)
+
+### 4. 🥧 Revenue Share by Product – Pie Chart  
+![Pie Chart](revenue_pie_chart.png)
+
+
+
+
 
 ---
